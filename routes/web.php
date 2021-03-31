@@ -24,7 +24,6 @@ Route::get('/p/create', [App\Http\Controllers\PostsController::class, 'create'])
 Route::post('/p{post}', [App\Http\Controllers\PostsController::class, 'store']);
 
 
-Route::get('/profile/{user}', [App\Http\Controllers\ProfilesController::class, 'index']);
+Route::get('/profile/{user}', [App\Http\Controllers\ProfilesController::class, 'index'])->name('profile');
 Route::get('/profile/{user}/edit', [App\Http\Controllers\ProfilesController::class, 'edit']);
 Route::patch('/profile/{user}', [App\Http\Controllers\ProfilesController::class, 'update']);
-
